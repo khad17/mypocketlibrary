@@ -6,21 +6,24 @@
   <link rel="stylesheet" href="/assets/bandeau.css">
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-</head>
-<body>
-<div class="navbar navbar-fixed-top">
+  
+  <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
+        	<p> PL </p>
+        	
             <a class="brand" >MyPocketLibrary</a>
             <ul class="nav">
-                <li class="active"><a href="/ideas">Offre </a></li>
-                <li class="active"><a href="/ideas">| Contact </a></li>
-                <li class="active"><a href="/ideas">| Inscription </a></li>   
-                <li class="active"><a href="/ideas">| Connexion</a></li>             
+                <li class="active"><a href="/ideas">Offre</a></li>
+                <li class="active"><a href="/ideas">|Contact</a></li>
+                <li class="active"><a href="/ideas">|Inscription</a></li>   
+                <li class="active"><a href="/ideas">|Connexion</a></li>             
             </ul>
         </div>
     </div>
 </div>
+</head>
+<body>
 
 <div class="container">
     <%= yield %>

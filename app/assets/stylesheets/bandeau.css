@@ -3403,7 +3403,7 @@ input[type="submit"].btn.btn-mini {
   margin-left: -20px;
   font-size: 20px;
   font-weight: 200;
-  color: #777777;
+  color: #D4D4D4;
   text-shadow: 0 1px 0 #999999;
 }
 .navbar .brand:hover {
@@ -3911,13 +3911,13 @@ input[type="submit"].btn.btn-mini {
 }
 .pagination ul > .active > a,
 .pagination ul > .active > span {
-  color: #999999;
+  color: #D4D4D4;
   cursor: default;
 }
 .pagination ul > .disabled > span,
 .pagination ul > .disabled > a,
 .pagination ul > .disabled > a:hover {
-  color: #999999;
+  color: #D4D4D4;
   background-color: transparent;
   cursor: default;
 }
