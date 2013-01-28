@@ -10,6 +10,10 @@ class ParametersController < ApplicationController
     end
   end
 
+ def make_bigger
+    @parameters = Paramerter.find(:all, :conditions=>"type_param=test")
+  end
+
   # GET /parameters/1
   # GET /parameters/1.json
   def show
