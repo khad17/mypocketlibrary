@@ -10,6 +10,6 @@ jQuery ->
   $("#urlToClick").click ->
     paintIt($("#urlToClick"), '#990000', '#990000')
 
-  $(".myCarousel").carousel() ->
+  $(".carousel").carousel ->
     interval:2000
-    
+  
