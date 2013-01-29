@@ -1,4 +1,8 @@
 Mypocketlibrary::Application.routes.draw do
+  get "selection/index"
+
+  resources :books
+
   get "accueil/index"
 
   resources :parameters
