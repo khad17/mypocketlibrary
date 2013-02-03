@@ -9,8 +9,10 @@ Mypocketlibrary::Application.routes.draw do
 
   resources :users
   
-  root :to => "users#index"
-
+  root :to => "accueil#index"
+  
+  match 'contact' => 'contact#new', :as => 'contact', :via => :get
+  match 'contact' => 'contact#create', :as => 'create', :via => :post
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

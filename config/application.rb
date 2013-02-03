@@ -39,6 +39,19 @@ module Mypocketlibrary
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
 
+    config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => "gmail.com",
+      :user_name            => "a.khadoudja@gmail.com",
+      :password             => "Naelou17",
+      :authentication       => :plain,
+      :enable_starttls_auto => true
+    }
+    
+    config.action_mailer.default_url_options = {
+      :host => "gmail.com"
+    }
     # Use SQL instead of Active Record's schema dumper when creating the database.
     # This is necessary if your schema can't be completely dumped by the schema dumper,
     # like if you have constraints or database-specific column types

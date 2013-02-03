@@ -5,6 +5,6 @@ class Book < ActiveRecord::Base
       if book != nil && book.first != nil
         book.first
       end
-  end
+    end
 
 end
