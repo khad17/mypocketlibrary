@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.1'
+gem "rails", "~> 3.2.11"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -10,7 +10,8 @@ gem 'mysql2','~> 0.3.11'
 
 gem 'carrierwave'
 
-
+gem 'forem', :git => "git://github.com/radar/forem.git"
+gem 'will_paginate', '3.0.3'
 
 # Gems used only for assets and not required
 # in production environments by default.

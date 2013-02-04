@@ -10,7 +10,8 @@ Mypocketlibrary::Application.routes.draw do
   resources :users
   
   root :to => "accueil#index"
-  
+  mount Forem::Engine, :at => "/forums"
+  get '/users/sign_in', :to => "users#sign_in"
   match 'contact' => 'contact#new', :as => 'contact', :via => :get
   match 'contact' => 'contact#create', :as => 'create', :via => :post
   # The priority is based upon order of creation:

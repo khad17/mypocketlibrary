@@ -42,15 +42,15 @@ module Mypocketlibrary
     config.action_mailer.smtp_settings = {
       :address              => "smtp.gmail.com",
       :port                 => 587,
-      :domain               => "gmail.com",
-      :user_name            => "a.khadoudja@gmail.com",
-      :password             => "Naelou17",
+      :domain               => "mypocketlibrary.com",
+      :user_name            => "noreply@mypocketlibrary.com",
+      :password             => "SeaDiving%9.4",
       :authentication       => :plain,
       :enable_starttls_auto => true
     }
     
     config.action_mailer.default_url_options = {
-      :host => "gmail.com"
+      :host => "mypocketlibrary.com"
     }
     # Use SQL instead of Active Record's schema dumper when creating the database.
     # This is necessary if your schema can't be completely dumped by the schema dumper,
