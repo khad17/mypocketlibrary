@@ -8,6 +8,10 @@ gem "rails", "~> 3.2.11"
 gem 'mysql2','~> 0.3.11'
 #gem 'sqlite3'
 
+gem 'net-sftp'
+gem 'net-ssh'
+
+
 gem 'carrierwave'
 
 gem 'forem', :git => "git://github.com/radar/forem.git"

@@ -81,6 +81,9 @@ GEM
     mime-types (1.19)
     multi_json (1.5.0)
     mysql2 (0.3.11-x86-mingw32)
+    net-sftp (2.0.5)
+      net-ssh (>= 2.0.9)
+    net-ssh (2.6.3)
     polyglot (0.3.3)
     pygments.rb (0.2.4)
       rubypython (~> 0.5.3)
@@ -147,6 +150,8 @@ DEPENDENCIES
   forem!
   jquery-rails
   mysql2 (~> 0.3.11)
+  net-sftp
+  net-ssh
   rails (~> 3.2.11)
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)

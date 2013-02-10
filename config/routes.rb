@@ -1,19 +1,18 @@
 Mypocketlibrary::Application.routes.draw do
+  root :to => "accueil#index"
   get "selection/index"
+  get "accueil/index"
+  get "download/index"
 
   resources :books
-
-  get "accueil/index"
-
   resources :parameters
-
   resources :users
-  
-  root :to => "accueil#index"
+
   mount Forem::Engine, :at => "/forums"
   get '/users/sign_in', :to => "users#sign_in"
-  match 'contact' => 'contact#new', :as => 'contact', :via => :get
+  match 'contact'   => 'contact#new', :as => 'contact', :via => :get
   match 'contact' => 'contact#create', :as => 'create', :via => :post
+  match 'download' =>'download#downloadFile', :as =>'downloadFile'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
