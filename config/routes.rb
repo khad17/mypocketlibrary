@@ -1,4 +1,12 @@
 Mypocketlibrary::Application.routes.draw do
+  resources :categories, :except => [:index, :show]
+  resources :forums, :except => :index do
+    resources :topics, :shallow => true, :except => :index do
+      resources :posts, :shallow => true, :except => [:index, :show]
+    end
+    root :to => 'categories#index', :via => :get
+  end
+
   root :to => "accueil#index"
   get "selection/index"
   get "accueil/index"
@@ -7,9 +15,8 @@ Mypocketlibrary::Application.routes.draw do
   resources :books
   resources :parameters
   resources :users
+  resources :sessions
 
-  mount Forem::Engine, :at => "/forums"
-  get '/users/sign_in', :to => "users#sign_in"
   match 'contact'   => 'contact#new', :as => 'contact', :via => :get
   match 'contact' => 'contact#create', :as => 'create', :via => :post
   match 'download' =>'download#downloadFile', :as =>'downloadFile'

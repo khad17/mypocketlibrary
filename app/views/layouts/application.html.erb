@@ -14,18 +14,53 @@
         	<p></p>
         	
             <!--<p class="brand" style="garamon" width="150">MyPocketLibrary</p> <-->
-             <a class="brand" href="accueil/index">MyPocketLibrary</a>
+             <a class="brand" href="/">MyPocketLibrary</a>
             <ul class="nav">
-                <li class="active"><a href="/selection/index">Offre</a></li>
-                <li class="active"><a href="/contact">|Contact</a></li>
-                <li class="active"><a href="/ideas">|Inscription</a></li>   
-                <li class="active"><a href="/ideas">|Connexion</a></li>             
+                <li class=""><a href="/selection/index">Offre</a></li>
+                <li class=""><a href="/contact">|Contact</a></li>
+                
+                
+                <% if current_user.nil? %> 
+                	<li class=""><a href="/users/new">|Inscription</a></li>  
+                	<li class=""><a href="/sessions/new">|Connexion</a></li>
+                <% else %>             
+                	<li class=""><a href="/forums">|Forum</a></li>
+                	<% if current_user.is_admin %> 
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">|Admin<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="/users">Liste Utilisateurs</a>
+								</li>
+	
+							</ul>
+						</li>
+                	<% end %>
+
+                	<li class=""><%= link_to "|Déconnexion (#{ current_user.login })", "/sessions/destroy", :method => :delete %></li>
+                <% end %>
+                
             </ul>
         </div>
     </div>
 </div>
 </head>
 <body>
+
+<% if notice %>
+<div class="alert alert-success">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <%= notice %>
+</div>	
+<% end %>
+
+<% if alert %>
+<div class="alert alert-error">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <%= alert %>
+</div>	
+<% end %>
+
 <div class="container">
     <%= yield %>
 </div>
